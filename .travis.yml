@@ -1,18 +1,18 @@
 language: cpp
 compiler:
-    - gcc
+    - clang
 # Change this to your needs
 env: PATH=/usr/lib/x86_64-linux-gnu/qt5/bin:$PATH
 before_install:
     - sudo cat /proc/meminfo
     - sudo ulimit
-#    - sudo apt-add-repository -y ppa:canonical-qt5-edgers/qt5-proper
+    - sudo apt-add-repository -y ppa:canonical-qt5-edgers/qt5-proper
 #    - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-#    - sudo apt-get -qq update
-#    - sudo apt-get -qq install qtdeclarative5-dev
-#    - sudo apt-get -qq build-dep chromium-browser
+    - sudo apt-get -qq update
+    - sudo apt-get -qq install qtdeclarative5-dev
+    - sudo apt-get -qq build-dep chromium-browser
 #    - sudo apt-get -qq install gcc-4.8 g++-4.8
-#    - ls -lah /usr/bin
+    - ls -lah /usr/bin
 #    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 20
 #    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
 #    - sudo update-alternatives --config gcc
@@ -23,8 +23,8 @@ before_install:
 #    - sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
 #    - gcc --version
 #    - g++ --version
-#    - git submodule init
-#    - git submodule update --recursive
+    - git submodule init
+    - git submodule update --recursive
 script:
     - which qmake
     - qmake --version
