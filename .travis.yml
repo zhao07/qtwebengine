@@ -9,5 +9,8 @@ before_install:
     - sudo apt-get -qq build-dep chromium-browser
     - git submodule init
     - git submodule update --recursive
-script: qmake && make
+script:
+    - which qmake
+    - qmake --version
+    - qmake && make
 
