@@ -2,6 +2,7 @@ language: cpp
 compiler:
     - gcc
 # Change this to your needs
+env: PATH=/usr/lib/x86_64-linux-gnu/qt5/bin:$PATH
 before_install:
     - sudo apt-add-repository -y ppa:canonical-qt5-edgers/qt5-proper
     - sudo apt-get -qq update
