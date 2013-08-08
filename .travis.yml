@@ -1,0 +1,13 @@
+language: cpp
+compiler:
+    - gcc
+# Change this to your needs
+before_install:
+    - sudo apt-add-repository ppa:canonical-qt5-edgers/qt5-proper
+    - sudo apt-get -qq update
+    - sudo apt-get -qq install qtdeclarative5-dev
+    - sudo apt-get -qq build-dep chromium-browser
+    - git submodule init
+    - git submodule update --recursive
+script: qmake && make
+
