@@ -5,14 +5,11 @@ compiler:
 env: PATH=/usr/lib/x86_64-linux-gnu/qt5/bin:$PATH
 before_install:
     - sudo apt-add-repository -y ppa:canonical-qt5-edgers/qt5-proper
-    - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
     - sudo apt-get -qq update
     - sudo apt-get -qq install qtdeclarative5-dev
     - sudo apt-get -qq build-dep chromium-browser
-    - sudo apt-get -qq install gcc-4.7
-    - sudo apt-get -qq install g++-4.7
-    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 20
-    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 20
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 20
+    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
     - sudo update-alternatives --config gcc
     - sudo update-alternatives --config g++
     - git submodule init
