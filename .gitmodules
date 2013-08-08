@@ -1,4 +1,4 @@
 [submodule "3rdparty"]
 	path = 3rdparty
-    url = git@github.com:zenoalbisser/chromium.git
+    url = https://github.com/zenoalbisser/chromium.git
     #url = git://gitorious.org/qt-labs/chromium.git
